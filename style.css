@@ -14,6 +14,14 @@ body{
     align-items: center;
     font-family: 'Montserrat', sans-serif;
 }
+h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0;
+    color: #ffc8fd;
+}
+
+/* HTML/CSS  accordion */
 .content{
     width: 70%;
     color: white;
@@ -69,26 +77,89 @@ body{
     font-weight: bold;
 }
 
-/* .desc { 
-    overflow: hidden;
+/* HTML/CSS & JavaScript accordion */
+.JS-title{
+    margin-top: 5%;
 }
-.desc a{
+.container{
+    width: 70%;
+    /* margin: 150px auto; */
+}
+.accordion .item .title{
     position: relative;
-    text-decoration: none;
+    font-weight: bold;
+    color: antiquewhite;
+    border-bottom: 1px solid antiquewhite;
+    cursor: pointer;
+    padding: 15px 10px;
 }
-.desc:target{
-    max-height: 100%;
+.accordion .item .title .icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid antiquewhite;
+    border-radius: 50%; */
+    text-align: center;
+    line-height: 20px;
+    font-size: 18px;
+}
+.desc{
+    max-height: 0px;
+}
+.accordion .item .desc{
+    opacity: 0;
+    overflow: hidden;
+    will-change: opacity, max-height;
+    transition: opacity 200ms linear, max-height 200ms linear;
+}
+.accordion .item.active .title{
+    color: #ffc8fd;
+    border-bottom: 1px solid #ffc8fd;
+}
+.accordion .item.active .title .icon{
+    /* border-bottom: 1px solid #ffc8fd; */
+    transform: translateY(-50%) rotate(45deg);
+}
+.accordion .item.active .desc{
+    opacity: 1;
+    max-height: 200px;
+    transition: all 200ms linear;
+}
+.accordion .item .desc p{
+    color: #ffffff;
+    padding: 20px;
+}
+
+/* Simpler HTML/CSS & JavaScript accordion */
+.wrapper{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 15%;
+}
+.header{
+    position: relative;
+    padding: 16px;
+    /* letter-spacing: 2px; */
+    background-color: #14161c;
+    border-bottom: 1px solid #ffc8fd;
+    cursor: pointer;
+    color: #ffffff;
+}
+.text{
+    padding: 16px;
+    color: #ffffff;
+    line-height: 24px;
+    display: none;
+}
+.header span{
+    position: absolute;
+    right: 20px;
+}
+.active{
+    display: block;
     transition: .3s all linear;
 }
-.desc a:after{
-    content: '+';
-    position: absolute;
-    right: 0;
-    text-align: center;
-}
-.desc:target a:after{
-    content: '-';
-    position: absolute;
-    right: 0;
-    text-align: center;
-} */
