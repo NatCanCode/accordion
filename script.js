@@ -40,7 +40,7 @@ for(let i=0; i<header.length; i++){
 // Prestashop custom JS //
 // let desc = document.querySelectorAll(".desc-title");
 
-// for(let i=0; i<header.length; i++){
+// for(let i=0; i<desc.length; i++){
 //     desc[i].addEventListener("click", function(){
 //         let accordion = this.nextElementSibling;
 //         accordion.classList.toggle("active")
